@@ -1,0 +1,30 @@
+package HashTable.Easy;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * https://leetcode.com/problems/intersection-of-two-arrays-ii/
+ * 查找重复数组的。
+ */
+public class IntersectionTwoArrays {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        HashSet<Integer> set1 = new HashSet<Integer>();
+        for (Integer n : nums1) set1.add(n);
+        HashSet<Integer> set2 = new HashSet<Integer>();
+        for (Integer n : nums2) set2.add(n);
+
+        set1.retainAll(set2);
+
+        int[] output = new int[set1.size()];
+        int idx = 0;
+        for (int s : set1) output[idx++] = s;
+        return output;
+    }
+
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,2,1};
+        int[] nums2 = {2, 2};
+
+    }
+}
