@@ -78,6 +78,6 @@ public class ClimbStairs {
 
     public static void main(String[] args) {
         ClimbStairs climbStairs = new ClimbStairs();
-        climbStairs.climbStairs(35);
+        climbStairs.climbStairs2(35);
     }
 }
