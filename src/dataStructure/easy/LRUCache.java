@@ -54,7 +54,6 @@ public class LRUCache {
     public void put(int key, int value) {
         Node node;
         //如果队列中存在，则先删除表中节点再插入头节点
-        //如果
         if (map.containsKey(key)) {
             node = map.get(key);
             node.v = value;
