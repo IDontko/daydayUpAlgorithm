@@ -1,4 +1,4 @@
-package DynamicProgram.easy.medium;
+package DynamicProgram.medium;
 
 import java.util.HashSet;
 import java.util.PriorityQueue;
