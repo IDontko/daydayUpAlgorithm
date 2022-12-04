@@ -22,11 +22,45 @@ public class LongestPalindrome {
         return ans;
     }
 
+    public String longestPalindrome2(String s) {
+        int length = s.toCharArray().length;
+        Boolean[][] dp = new Boolean[length][length];
+        for(int i = 0; i< dp.length ; i++){
+            dp[i][i] = true;
+        }
+        int maxlength = 0;
+        String result = String.valueOf(s.charAt(0));
+        for(int l = 2; l <= length; l++){
+            for(int i = 0; i< length; i++){
+                int j = i + l -1;
+                if (j >= length){
+                    break;
+                }
+                if (s.charAt(i) != s.charAt(j)){
+                    dp[i][j] = false;
+                }else {
+                    if (j - i< 3){
+                        dp[i][j] = true;
+                    }else {
+                        dp[i][j] = dp[i+1][j-1];
+                    }
+
+                }
+                if (dp[i][j] && l >maxlength){
+                    maxlength = l;
+                    result =  s.substring(i, i + l);
+                }
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         /* output =7;
         Explanation:
         One longest palindrome that can be built is "dccaccd", whose length is 7.*/
-        String s = "abccccdd";
+        String s ="aacabdkacaa";
         System.out.println(5/2*2);
+        new LongestPalindrome().longestPalindrome2(s);
     }
 }

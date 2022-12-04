@@ -1,6 +1,5 @@
 package Array.medium;
 
-import com.sun.deploy.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -89,7 +88,7 @@ public class FourSum {
         list.add("123");
         list.add("123");
         System.out.println(list);
-        String join = StringUtils.join(list, ",");
-        System.out.println(join);
+//        String join = StringUtils.join(list, ",");
+//        System.out.println(join);
     }
 }
