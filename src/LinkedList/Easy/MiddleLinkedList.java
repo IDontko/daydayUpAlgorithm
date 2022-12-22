@@ -1,5 +1,7 @@
 package LinkedList.Easy;
 
+import common.ListNode;
+
 import java.util.*;
 
 /**
@@ -86,9 +88,4 @@ public class MiddleLinkedList {
 
         System.out.println(a.equals(b));
     }
-}
-class ListNode{
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
 }
