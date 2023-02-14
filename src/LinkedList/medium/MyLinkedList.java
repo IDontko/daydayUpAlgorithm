@@ -2,6 +2,9 @@ package LinkedList.medium;
 
 import common.ListNode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MyLinkedList {
 
     int size;
@@ -49,6 +52,7 @@ public class MyLinkedList {
     }
 
     public void deleteAtIndex(int index) {
+
         if (index < 0 || index >= size) {
             return;
         }

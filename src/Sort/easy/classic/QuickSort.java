@@ -1,12 +1,13 @@
 package Sort.easy.classic;
 
 public class QuickSort {
-    public static void Quicksort(int array[], int left, int right) {
+    public static void Quicksort(int[] array, int left, int right) {
         if(left < right){
             int pos = partition(array, left, right);
             Quicksort(array, left, pos - 1);
             Quicksort(array, pos + 1, right);
         }
+
     }
     public static int partition(int[] array,int left,int right) {
         int begin = left;
@@ -36,5 +37,12 @@ public class QuickSort {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr ={ 2,5,4,9,3,6,8,7,1,0};
+        new QuickSort().Quicksort(arr, 0, arr.length - 1);
+        System.out.println(arr);
+        
     }
 }
