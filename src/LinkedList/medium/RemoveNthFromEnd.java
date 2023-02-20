@@ -33,6 +33,7 @@ public class RemoveNthFromEnd {
         ListNode dummy = new ListNode(0, head);
         ListNode first = head;
         ListNode second = dummy;
+
         for (int i = 0; i < n; i++) {
             first = first.next;
         }
