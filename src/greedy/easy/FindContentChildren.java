@@ -1,9 +1,9 @@
-package greedy;
+package greedy.easy;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
+ * 贪心算法
  * 分发饼干
  * https://leetcode.cn/problems/assign-cookies/
  */
